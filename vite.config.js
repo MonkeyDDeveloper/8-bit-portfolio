@@ -16,5 +16,6 @@ export default defineConfig({
   preview: {
     port: process.env.PORT || 4173,
     host: true, // Listen on all addresses (0.0.0.0)
+    allowedHosts: ['all'], // Allow all hosts for deployment
   },
 })
