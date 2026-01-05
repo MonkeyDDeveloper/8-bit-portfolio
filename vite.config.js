@@ -16,6 +16,6 @@ export default defineConfig({
   preview: {
     port: process.env.PORT || 4173,
     host: true, // Listen on all addresses (0.0.0.0)
-    allowedHosts: ['web-591ldsin8brs.up-de-fra1-k8s-1.apps.run-on-seenode.com'], // Allow all hosts for deployment
+    allowedHosts: ['web-591ldsin8brs.up-de-fra1-k8s-1.apps.run-on-seenode.com', 'monkeydeveloper.com', 'www.monkeydeveloper.com'], // Allow all hosts for deployment
   },
 })
