@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT ME",
+    "projects": "PROJECTS",
+    "experience": "EXPERIENCE"
+  },
+  "home": {
+    "greeting": "HELLO, WORLD!",
+    "name": "I'M JAVIER FRAY",
+    "title": "FULL STACK DEVELOPER",
+    "subtitle": "Building scalable, functional and high-impact solutions",
+    "location": "Quito | Ecuador",
+    "cta": "START QUEST",
+    "stats": {
+      "years": "YEARS EXP",
+      "projects": "PROJECTS",
+      "technologies": "TECH STACK"
+    }
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "subtitle": "PLAYER PROFILE",
+    "bio": "I am a developer with experience in full-stack development, able to work in all stages of application creation. From the implementation of modern interfaces to the design and optimization of server logic and structure.",
+    "bio2": "I have participated in projects oriented to both end-users and internal systems, focusing on building scalable, functional and high-impact solutions.",
+    "bio3": "I adapt to the needs of the project, always looking for a balance between technical efficiency, product quality and an effective user experience.",
+    "skills": "SKILLS",
+    "education": "EDUCATION",
+    "educationTitle": "Superior Technologist in Automation and Instrumentation",
+    "educationPlace": "Ecuador, 2017-2022",
+    "languages": "LANGUAGES",
+    "spanish": "Spanish (Native)",
+    "english": "English (B2 - Conversational)",
+    "certifications": "CERTIFICATIONS",
+    "contact": "CONTACT",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "website": "Website"
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "subtitle": "QUEST LOG",
+    "viewCode": "VIEW CODE",
+    "techStack": "TECH STACK",
+    "items": {
+      "portfolio": {
+        "name": "Portfolio",
+        "description": "Personal portfolio built with React, TypeScript, .NET, EntityFramework, and deployed with GitHub Actions."
+      },
+      "pythonCrud": {
+        "name": "Python CRUD CLI Postgres",
+        "description": "Command line interface for CRUD operations with PostgreSQL, featuring bcrypt encryption and Docker."
+      },
+      "reactPlaybook": {
+        "name": "React Playbook",
+        "description": "React project with React Router Dom, Redux-toolkit, Standard linter, Vitejs, and Playwright testing."
+      },
+      "bookList": {
+        "name": "Book Reading List",
+        "description": "Book management application built with React, TypeScript, Redux-toolkit, React-query and Tailwind."
+      },
+      "typescriptApi": {
+        "name": "TypeScript API + Redis",
+        "description": "REST API with TypeScript, Express, Redis caching, Swagger docs, Jest testing, and Docker deployment."
+      },
+      "lambdaApi": {
+        "name": "Lambda Functions REST API",
+        "description": "Serverless REST API using AWS Gateway, Lambda Functions, MongoDB and Vue.js frontend."
+      },
+      "flaskApi": {
+        "name": "Dockerized Flask REST API",
+        "description": "Python Flask REST API with PyMongo, containerized with Docker and MongoDB."
+      },
+      "productManagement": {
+        "name": "Product Management System",
+        "description": "Full-stack product management system with Docker, TypeScript, Express, JWT auth, and Vue.js."
+      }
+    }
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "subtitle": "BATTLE LOG",
+    "current": "CURRENT",
+    "responsibilities": "RESPONSIBILITIES",
+    "techStack": "TECH STACK",
+    "items": {
+      "altscore": {
+        "title": "Delivery Engineer",
+        "company": "AltScore",
+        "location": "Remote",
+        "period": "Jun 2025 - Present",
+        "description": "Spearheaded the end-to-end delivery of customized credit evaluation solutions, acting as the primary technical liaison for clients. Analyzed client needs and existing systems to design and implement optimal integration strategies."
+      },
+      "dacodes": {
+        "title": "Software Engineer",
+        "company": "Dacodes",
+        "location": "Remote",
+        "period": "May 2024 - Dec 2024",
+        "description": "Developed an application to manage operator training for ATY (Agencia de Transportes de Yucatán) in Yucatán, Mexico. Collaborated closely with ATY's development team to deploy the application on their servers."
+      },
+      "cacao": {
+        "title": "FrontEnd Developer",
+        "company": "CacaoWebStudio",
+        "location": "Remote",
+        "period": "Nov 2023 - Feb 2024",
+        "description": "Contributed to developing a client's website using Shopify Dawn, improving speed and adding new functionalities. Led the implementation of the company's new website using modern frontend and backend technologies."
+      },
+      "soluciones": {
+        "title": "FullStack Developer",
+        "company": "Soluciones y Proyectos SA",
+        "location": "Ecuador",
+        "period": "Oct 2022 - Nov 2023",
+        "description": "Collaborated on Nomina360—a robust web application streamlining human resources management. Automated complex tasks such as permissions, vacation tracking, and payroll."
+      },
+      "monkeyd": {
+        "title": "FullStack Developer",
+        "company": "MonkeyDDevelopment",
+        "location": "Ecuador",
+        "period": "Feb 2021 - Jul 2022",
+        "description": "Launched a comprehensive web application to enhance the student enrollment experience at ISPEDIB 'Martha Bucaram de Rolds', achieving a 70% reduction in processing time."
+      }
+    }
+  },
+  "common": {
+    "loading": "LOADING...",
+    "error": "ERROR!",
+    "darkMode": "DARK MODE",
+    "lightMode": "LIGHT MODE",
+    "language": "LANGUAGE",
+    "pressStart": "PRESS START",
+    "selectLanguage": "SELECT LANGUAGE"
+  },
+  "footer": {
+    "madeWith": "MADE WITH",
+    "by": "BY JAVIER FRAY",
+    "year": "2024"
+  }
+}

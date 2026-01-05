@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "about": "SOBRE MÍ",
+    "projects": "PROYECTOS",
+    "experience": "EXPERIENCIA"
+  },
+  "home": {
+    "greeting": "¡HOLA, MUNDO!",
+    "name": "SOY JAVIER FRAY",
+    "title": "DESARROLLADOR FULL STACK",
+    "subtitle": "Construyendo soluciones escalables, funcionales y de alto impacto",
+    "location": "Quito | Ecuador",
+    "cta": "INICIAR AVENTURA",
+    "stats": {
+      "years": "AÑOS EXP",
+      "projects": "PROYECTOS",
+      "technologies": "TECNOLOGÍAS"
+    }
+  },
+  "about": {
+    "title": "SOBRE MÍ",
+    "subtitle": "PERFIL DEL JUGADOR",
+    "bio": "Soy un desarrollador con experiencia en desarrollo full-stack, capaz de trabajar en todas las etapas de creación de aplicaciones. Desde la implementación de interfaces modernas hasta el diseño y optimización de la lógica y estructura del servidor.",
+    "bio2": "He participado en proyectos orientados tanto a usuarios finales como a sistemas internos, enfocándome en construir soluciones escalables, funcionales y de alto impacto.",
+    "bio3": "Me adapto a las necesidades del proyecto, siempre buscando un equilibrio entre eficiencia técnica, calidad del producto y una experiencia de usuario efectiva.",
+    "skills": "HABILIDADES",
+    "education": "EDUCACIÓN",
+    "educationTitle": "Tecnólogo Superior en Automatización e Instrumentación",
+    "educationPlace": "Ecuador, 2017-2022",
+    "languages": "IDIOMAS",
+    "spanish": "Español (Nativo)",
+    "english": "Inglés (B2 - Conversacional)",
+    "certifications": "CERTIFICACIONES",
+    "contact": "CONTACTO",
+    "email": "Correo",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "website": "Sitio Web"
+  },
+  "projects": {
+    "title": "PROYECTOS",
+    "subtitle": "REGISTRO DE MISIONES",
+    "viewCode": "VER CÓDIGO",
+    "techStack": "TECNOLOGÍAS",
+    "items": {
+      "portfolio": {
+        "name": "Portfolio",
+        "description": "Portfolio personal construido con React, TypeScript, .NET, EntityFramework, y desplegado con GitHub Actions."
+      },
+      "pythonCrud": {
+        "name": "Python CRUD CLI Postgres",
+        "description": "Interfaz de línea de comandos para operaciones CRUD con PostgreSQL, con encriptación bcrypt y Docker."
+      },
+      "reactPlaybook": {
+        "name": "React Playbook",
+        "description": "Proyecto React con React Router Dom, Redux-toolkit, Standard linter, Vitejs y pruebas con Playwright."
+      },
+      "bookList": {
+        "name": "Lista de Lectura",
+        "description": "Aplicación de gestión de libros construida con React, TypeScript, Redux-toolkit, React-query y Tailwind."
+      },
+      "typescriptApi": {
+        "name": "TypeScript API + Redis",
+        "description": "REST API con TypeScript, Express, caché Redis, documentación Swagger, pruebas Jest y despliegue Docker."
+      },
+      "lambdaApi": {
+        "name": "Lambda Functions REST API",
+        "description": "REST API serverless usando AWS Gateway, Lambda Functions, MongoDB y frontend Vue.js."
+      },
+      "flaskApi": {
+        "name": "Dockerized Flask REST API",
+        "description": "REST API Python Flask con PyMongo, containerizado con Docker y MongoDB."
+      },
+      "productManagement": {
+        "name": "Sistema de Gestión de Productos",
+        "description": "Sistema full-stack de gestión de productos con Docker, TypeScript, Express, autenticación JWT y Vue.js."
+      }
+    }
+  },
+  "experience": {
+    "title": "EXPERIENCIA",
+    "subtitle": "REGISTRO DE BATALLAS",
+    "current": "ACTUAL",
+    "responsibilities": "RESPONSABILIDADES",
+    "techStack": "TECNOLOGÍAS",
+    "items": {
+      "altscore": {
+        "title": "Delivery Engineer",
+        "company": "AltScore",
+        "location": "Remoto",
+        "period": "Jun 2025 - Presente",
+        "description": "Lideré la entrega de extremo a extremo de soluciones de evaluación crediticia personalizadas, actuando como enlace técnico principal para clientes. Analicé las necesidades de los clientes y sistemas existentes para diseñar e implementar estrategias óptimas de integración."
+      },
+      "dacodes": {
+        "title": "Software Engineer",
+        "company": "Dacodes",
+        "location": "Remoto",
+        "period": "May 2024 - Dic 2024",
+        "description": "Desarrollé una aplicación para gestionar la capacitación de operadores para ATY (Agencia de Transportes de Yucatán) en Yucatán, México. Colaboré estrechamente con el equipo de desarrollo de ATY para desplegar la aplicación en sus servidores."
+      },
+      "cacao": {
+        "title": "Desarrollador FrontEnd",
+        "company": "CacaoWebStudio",
+        "location": "Remoto",
+        "period": "Nov 2023 - Feb 2024",
+        "description": "Contribuí al desarrollo del sitio web de un cliente usando Shopify Dawn, mejorando la velocidad y añadiendo nuevas funcionalidades. Lideré la implementación del nuevo sitio web de la empresa usando tecnologías modernas."
+      },
+      "soluciones": {
+        "title": "Desarrollador FullStack",
+        "company": "Soluciones y Proyectos SA",
+        "location": "Ecuador",
+        "period": "Oct 2022 - Nov 2023",
+        "description": "Colaboré en Nomina360—una robusta aplicación web que optimiza la gestión de recursos humanos. Automaticé tareas complejas como permisos, seguimiento de vacaciones y nómina."
+      },
+      "monkeyd": {
+        "title": "Desarrollador FullStack",
+        "company": "MonkeyDDevelopment",
+        "location": "Ecuador",
+        "period": "Feb 2021 - Jul 2022",
+        "description": "Lancé una aplicación web integral para mejorar la experiencia de inscripción estudiantil en ISPEDIB 'Martha Bucaram de Rolds', logrando una reducción del 70% en el tiempo de procesamiento."
+      }
+    }
+  },
+  "common": {
+    "loading": "CARGANDO...",
+    "error": "¡ERROR!",
+    "darkMode": "MODO OSCURO",
+    "lightMode": "MODO CLARO",
+    "language": "IDIOMA",
+    "pressStart": "PRESIONA START",
+    "selectLanguage": "SELECCIONAR IDIOMA"
+  },
+  "footer": {
+    "madeWith": "HECHO CON",
+    "by": "POR JAVIER FRAY",
+    "year": "2024"
+  }
+}

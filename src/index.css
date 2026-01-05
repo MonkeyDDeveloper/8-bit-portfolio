@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 8-bit Base Styles */
+@layer base {
+  :root {
+    --pixel-size: 4px;
+    /* Paleta azul marino clásico */
+    --retro-black: #0a0f1e;          /* Azul muy oscuro (casi negro) */
+    --retro-white: #f0f4f8;          /* Azul muy claro (casi blanco) */
+    --retro-gray: #64748b;           /* Gris azulado */
+    --retro-darkgray: #1e293b;       /* Gris oscuro azulado */
+    --retro-primary: #1e3a8a;        /* Azul marino profundo */
+    --retro-secondary: #3b82f6;      /* Azul medio */
+    --retro-accent: #60a5fa;         /* Azul claro */
+    --retro-warning: #f59e0b;        /* Ámbar (para warnings) */
+    --retro-danger: #ef4444;         /* Rojo (para errores) */
+  }
+
+  * {
+    image-rendering: pixelated;
+  }
+
+  body {
+    @apply font-mono bg-retro-black text-retro-white min-h-screen;
+    background-image:
+      linear-gradient(rgba(30, 58, 138, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 58, 138, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .dark body {
+    @apply bg-retro-black text-retro-white;
+  }
+
+  .light body {
+    @apply bg-retro-white text-retro-black;
+  }
+}
+
+/* 8-bit Component Styles */
+@layer components {
+  .pixel-border {
+    border: 4px solid currentColor;
+    box-shadow: 
+      4px 4px 0 0 currentColor,
+      inset -4px -4px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .pixel-border-sm {
+    border: 2px solid currentColor;
+    box-shadow: 2px 2px 0 0 currentColor;
+  }
+
+  .pixel-btn {
+    @apply font-pixel text-xs px-4 py-3 uppercase tracking-wider;
+    @apply transition-all duration-100;
+    border: 4px solid currentColor;
+    box-shadow: 4px 4px 0 0 currentColor;
+  }
+
+  .pixel-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 currentColor;
+  }
+
+  .pixel-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+
+  .pixel-card {
+    @apply p-4;
+    border: 4px solid currentColor;
+    box-shadow: 
+      8px 8px 0 0 currentColor,
+      inset -4px -4px 0 0 rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  }
+
+  .pixel-text {
+    @apply font-pixel;
+    text-shadow: 2px 2px 0 currentColor;
+  }
+
+  .retro-link {
+    @apply relative;
+  }
+
+  .retro-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-current;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  .retro-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .scanlines {
+    position: relative;
+  }
+
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
+  }
+
+  .crt-effect {
+    animation: crt 0.05s infinite;
+  }
+
+  @keyframes crt {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.98; }
+  }
+
+  /* Scrollbar 8-bit style */
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--retro-darkgray);
+    border: 2px solid var(--retro-gray);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--retro-primary);
+    border: 2px solid var(--retro-darkgray);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--retro-secondary);
+  }
+
+  /* Selection */
+  ::selection {
+    background: var(--retro-primary);
+    color: var(--retro-black);
+  }
+}
+
+/* Light mode overrides */
+.light {
+  --retro-black: #ffffff;          /* Blanco puro para fondo */
+  --retro-white: #0f172a;          /* Azul muy oscuro para texto */
+  --retro-gray: #475569;           /* Gris medio para texto secundario */
+  --retro-darkgray: #cbd5e1;       /* Gris claro para bordes/divisores */
+  --retro-primary: #1e40af;        /* Azul más oscuro para mejor contraste */
+  --retro-secondary: #2563eb;      /* Azul medio oscuro */
+  --retro-accent: #3b82f6;         /* Azul medio */
+}
+
+.light body {
+  background-color: #ffffff;       /* Blanco puro */
+  color: #0f172a;                  /* Azul oscuro para texto */
+  background-image:
+    linear-gradient(rgba(30, 58, 138, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 138, 0.03) 1px, transparent 1px);
+}
+
+.light .pixel-card {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, transparent 100%);
+  border-color: rgba(30, 58, 138, 0.2); /* Bordes más visibles */
+}
+
+/* Mejorar contraste de badges en light mode */
+.light .pixel-badge {
+  border-width: 2px;
+  opacity: 0.9;
+}
+
+/* Mejorar contraste de botones en light mode */
+.light .pixel-button {
+  box-shadow: 2px 2px 0px 0px rgba(30, 58, 138, 0.4);
+}
+
+/* Texto más oscuro en light mode para mejor legibilidad */
+.light p, .light span, .light div {
+  color: #0f172a;
+}
+
+.light .text-retro-gray {
+  color: #475569 !important; /* Gris más oscuro */
+}
