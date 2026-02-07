@@ -54,10 +54,10 @@ export function AboutPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-pixel text-2xl md:text-3xl text-retro-primary mb-4">
+          <h1 className="font-pixel text-2xl md:text-4xl text-retro-accent mb-4">
             {t('about.title')}
           </h1>
-          <p className="font-pixel text-xs text-retro-secondary">
+          <p className="font-pixel text-sm text-retro-secondary">
             [ {t('about.subtitle')} ]
           </p>
         </div>
@@ -83,10 +83,10 @@ export function AboutPage() {
                   />
                   
                   <div className="text-center">
-                    <p className="font-pixel text-[10px] text-retro-warning mb-2">
+                    <p className="font-pixel text-xs text-retro-warning mb-2">
                       FULL STACK DEVELOPER
                     </p>
-                    <p className="font-pixel text-[8px] text-retro-gray">
+                    <p className="font-pixel text-[10px] text-retro-gray">
                       LVL 4+ YEARS EXP
                     </p>
                   </div>
@@ -112,8 +112,8 @@ export function AboutPage() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-sm hover:text-retro-secondary transition-colors group"
                     >
-                      <Icon size={14} className="opacity-75" />
-                      <span className="font-mono text-xs truncate group-hover:translate-x-1 transition-transform">
+                      <Icon size={16} className="opacity-80" />
+                      <span className="font-mono text-sm truncate group-hover:translate-x-1 transition-transform">
                         {value}
                       </span>
                     </a>
@@ -153,7 +153,7 @@ export function AboutPage() {
                 <PixelCardTitle>BIOGRAPHY</PixelCardTitle>
               </PixelCardHeader>
               <PixelCardContent>
-                <div className="space-y-4 font-mono text-sm leading-relaxed">
+                <div className="space-y-4 font-mono text-base leading-relaxed text-retro-white/90">
                   <p>&gt; {t('about.bio')}</p>
                   <p>&gt; {t('about.bio2')}</p>
                   <p>&gt; {t('about.bio3')}</p>
@@ -173,7 +173,7 @@ export function AboutPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Frontend */}
                   <div>
-                    <p className="font-pixel text-[10px] text-retro-primary mb-3">FRONTEND</p>
+                    <p className="font-pixel text-xs text-retro-accent mb-3">FRONTEND</p>
                     <div className="space-y-3">
                       {skills.frontend.map(({ name, level }) => (
                         <PixelProgress
@@ -188,7 +188,7 @@ export function AboutPage() {
 
                   {/* Backend */}
                   <div>
-                    <p className="font-pixel text-[10px] text-retro-secondary mb-3">BACKEND</p>
+                    <p className="font-pixel text-xs text-retro-secondary mb-3">BACKEND</p>
                     <div className="space-y-3">
                       {skills.backend.map(({ name, level }) => (
                         <PixelProgress
@@ -203,7 +203,7 @@ export function AboutPage() {
 
                   {/* Database */}
                   <div>
-                    <p className="font-pixel text-[10px] text-retro-accent mb-3">DATABASE</p>
+                    <p className="font-pixel text-xs text-retro-accent mb-3">DATABASE</p>
                     <div className="space-y-3">
                       {skills.database.map(({ name, level }) => (
                         <PixelProgress
@@ -218,7 +218,7 @@ export function AboutPage() {
 
                   {/* DevOps */}
                   <div>
-                    <p className="font-pixel text-[10px] text-retro-warning mb-3">DEVOPS</p>
+                    <p className="font-pixel text-xs text-retro-warning mb-3">DEVOPS</p>
                     <div className="space-y-3">
                       {skills.devops.map(({ name, level }) => (
                         <PixelProgress
@@ -248,7 +248,7 @@ export function AboutPage() {
                   <p className="font-mono text-sm mb-2">
                     {t('about.educationTitle')}
                   </p>
-                  <p className="font-pixel text-[8px] text-retro-gray">
+                  <p className="font-pixel text-[10px] text-retro-gray">
                     {t('about.educationPlace')}
                   </p>
                 </PixelCardContent>

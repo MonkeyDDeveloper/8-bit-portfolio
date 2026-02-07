@@ -14,7 +14,7 @@ export function PixelBadge({ children, variant = 'default', className, ...props 
     <span
       className={cn(
         'inline-flex items-center px-2 py-1',
-        'font-pixel text-[8px] uppercase tracking-wider',
+        'font-pixel text-[10px] uppercase tracking-wider',
         'border-2',
         variants[variant],
         className

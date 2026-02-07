@@ -89,10 +89,10 @@ export function ExperiencePage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-pixel text-2xl md:text-3xl text-retro-primary mb-4">
+          <h1 className="font-pixel text-2xl md:text-4xl text-retro-accent mb-4">
             {t('experience.title')}
           </h1>
-          <p className="font-pixel text-xs text-retro-secondary">
+          <p className="font-pixel text-sm text-retro-secondary">
             [ {t('experience.subtitle')} ]
           </p>
         </div>
@@ -103,13 +103,13 @@ export function ExperiencePage() {
             <PixelCardContent>
               <div className="flex justify-center items-center gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <Swords size={16} className="text-retro-danger" />
-                  <span className="font-pixel text-[10px]">{experiences.length} BATTLES WON</span>
+                  <Swords size={18} className="text-retro-danger" />
+                  <span className="font-pixel text-xs text-retro-white">{experiences.length} BATTLES WON</span>
                 </div>
                 <div className="w-px h-4 bg-retro-gray/30 hidden sm:block" />
                 <div className="flex items-center gap-2">
-                  <Shield size={16} className="text-retro-primary" />
-                  <span className="font-pixel text-[10px]">{yearsOfExperience}+ YEARS EXP</span>
+                  <Shield size={18} className="text-retro-accent" />
+                  <span className="font-pixel text-xs text-retro-white">{yearsOfExperience}+ YEARS EXP</span>
                 </div>
               </div>
             </PixelCardContent>
@@ -153,18 +153,18 @@ export function ExperiencePage() {
       <p className="font-pixel text-xs">
         @ {exp.company}
         {exp.current && (
-          <span className="ml-2 text-retro-primary animate-blink">
+          <span className="ml-2 text-retro-accent animate-blink">
             [{t('experience.current')}]
           </span>
         )}
       </p>
       <div className="flex flex-wrap gap-3 text-retro-gray">
-        <span className="flex items-center gap-1 font-mono text-[10px]">
-          <MapPin size={12} />
+        <span className="flex items-center gap-1 font-mono text-xs">
+          <MapPin size={14} />
           {exp.location}
         </span>
-        <span className="flex items-center gap-1 font-mono text-[10px]">
-          <Calendar size={12} />
+        <span className="flex items-center gap-1 font-mono text-xs">
+          <Calendar size={14} />
           {exp.period}
         </span>
       </div>
@@ -174,13 +174,13 @@ export function ExperiencePage() {
 
                   <PixelCardContent>
                     {/* Description */}
-                    <p className="font-mono text-sm mb-4 text-left">
+                    <p className="font-mono text-base mb-4 text-left text-retro-white/90">
                       &gt; {exp.description}
                     </p>
 
                     {/* Tech Stack */}
                     <div>
-                      <p className="font-pixel text-[8px] text-retro-gray mb-2 uppercase text-left">
+                      <p className="font-pixel text-[10px] text-retro-gray mb-2 uppercase text-left">
                         {t('experience.techStack')}:
                       </p>
                       <div className="flex flex-wrap gap-2 justify-start">
@@ -201,7 +201,7 @@ export function ExperiencePage() {
         {/* End of Timeline */}
         <div className="text-center mt-8">
           <div className="inline-block border-2 border-retro-primary/30 px-6 py-3">
-            <p className="font-pixel text-[10px] text-retro-primary/70">
+            <p className="font-pixel text-xs text-retro-secondary/80">
               &gt; THE ADVENTURE CONTINUES..._<span className="animate-blink">|</span>
             </p>
           </div>
@@ -220,8 +220,8 @@ export function ExperiencePage() {
               variant={index % 2 === 0 ? 'default' : 'secondary'}
               className="text-center py-4"
             >
-              <p className="font-pixel text-lg md:text-xl">{stat.value}</p>
-              <p className="font-pixel text-[8px] mt-1 opacity-75">{stat.label}</p>
+              <p className="font-pixel text-xl md:text-2xl text-retro-white">{stat.value}</p>
+              <p className="font-pixel text-[10px] md:text-xs mt-2 text-retro-white/80">{stat.label}</p>
             </PixelCard>
           ))}
         </div>

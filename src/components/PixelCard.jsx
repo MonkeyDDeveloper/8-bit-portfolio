@@ -41,7 +41,7 @@ export function PixelCardHeader({ children, className, ...props }) {
 export function PixelCardTitle({ children, className, ...props }) {
   return (
     <h3
-      className={cn('font-pixel text-sm uppercase tracking-wider', className)}
+      className={cn('font-pixel text-sm md:text-base uppercase tracking-wider', className)}
       {...props}
     >
       {children}
@@ -51,7 +51,7 @@ export function PixelCardTitle({ children, className, ...props }) {
 
 export function PixelCardContent({ children, className, ...props }) {
   return (
-    <div className={cn('font-mono text-sm', className)} {...props}>
+    <div className={cn('font-mono text-base text-retro-white', className)} {...props}>
       {children}
     </div>
   );

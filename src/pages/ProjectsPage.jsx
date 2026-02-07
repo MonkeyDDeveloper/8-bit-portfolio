@@ -60,10 +60,10 @@ export function ProjectsPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-pixel text-2xl md:text-3xl text-retro-primary mb-4">
+          <h1 className="font-pixel text-2xl md:text-4xl text-retro-accent mb-4">
             {t('projects.title')}
           </h1>
-          <p className="font-pixel text-xs text-retro-secondary">
+          <p className="font-pixel text-sm text-retro-secondary">
             [ {t('projects.subtitle')} ]
           </p>
         </div>
@@ -71,7 +71,7 @@ export function ProjectsPage() {
         {/* Quest Select Screen */}
         <div className="mb-8 text-center">
           <div className="inline-block border-2 border-retro-primary/50 px-6 py-3">
-            <p className="font-pixel text-[10px] text-retro-primary">
+            <p className="font-pixel text-xs text-retro-secondary">
               SELECT YOUR QUEST <span className="animate-blink">▼</span>
             </p>
           </div>
@@ -101,13 +101,13 @@ export function ProjectsPage() {
               </PixelCardHeader>
 
               <PixelCardContent>
-                <p className="font-mono text-sm mb-4 opacity-90">
+                <p className="font-mono text-base mb-4 text-retro-white/90">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="mb-4">
-                  <p className="font-pixel text-[8px] text-retro-gray mb-2 uppercase">
+                  <p className="font-pixel text-[10px] text-retro-gray mb-2 uppercase">
                     {t('projects.techStack')}:
                   </p>
                   <div className="flex flex-wrap gap-2">

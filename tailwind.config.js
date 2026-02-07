@@ -16,7 +16,7 @@ export default {
           // Azul marino clásico
           black: '#0a0f1e',
           white: '#f0f4f8',
-          gray: '#64748b',
+          gray: '#8194ab',
           darkgray: '#1e293b',
           primary: '#1e3a8a',
           secondary: '#3b82f6',

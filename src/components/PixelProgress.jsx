@@ -15,8 +15,8 @@ export function PixelProgress({ value = 0, max = 100, label, className, variant 
     <div className={cn('w-full', className)}>
       {label && (
         <div className="flex justify-between mb-1">
-          <span className="font-pixel text-[8px] uppercase">{label}</span>
-          <span className="font-pixel text-[8px]">{Math.round(percentage)}%</span>
+          <span className="font-pixel text-[10px] uppercase text-retro-white">{label}</span>
+          <span className="font-pixel text-[10px] text-retro-white">{Math.round(percentage)}%</span>
         </div>
       )}
       <div className="h-4 bg-retro-darkgray border-2 border-current relative overflow-hidden">

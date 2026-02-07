@@ -41,33 +41,33 @@ export function HomePage() {
 
           <PixelCardContent className="text-center py-8 md:py-12">
             {/* Greeting */}
-            <p className="font-pixel text-xs text-retro-secondary mb-1 animate-slide-in">
+            <p className="font-pixel text-sm text-retro-secondary mb-1 animate-slide-in">
               {t('home.greeting')}
             </p>
 
-            <p className="font-mono text-[10px] text-retro-gray/50 mb-8">
+            <p className="font-mono text-xs text-retro-gray/60 mb-8">
               Portfolio Alpha (v.0.0.1)
             </p>
 
             {/* Name */}
-            <h1 className="font-pixel text-xl md:text-3xl text-retro-primary mb-4">
+            <h1 className="font-pixel text-2xl md:text-4xl text-retro-accent mb-4">
               {t('home.name')}
             </h1>
 
             {/* Title */}
-            <h2 className="font-pixel text-sm md:text-lg text-retro-warning mb-6">
+            <h2 className="font-pixel text-base md:text-xl text-retro-warning mb-6">
               {t('home.title')}
             </h2>
 
             {/* Subtitle */}
-            <p className="font-mono text-sm md:text-base text-retro-gray max-w-lg mx-auto mb-6">
+            <p className="font-mono text-base md:text-lg text-retro-white/80 max-w-lg mx-auto mb-6">
               {t('home.subtitle')}
             </p>
 
             {/* Location */}
             <div className="flex items-center justify-center gap-2 text-retro-accent mb-8">
-              <MapPin size={16} />
-              <span className="font-pixel text-[10px]">{t('home.location')}</span>
+              <MapPin size={18} />
+              <span className="font-pixel text-xs">{t('home.location')}</span>
             </div>
 
             {/* CTA Button */}
@@ -91,9 +91,9 @@ export function HomePage() {
                 animation: `fade-in 0.5s ease-out ${0.3 + index * 0.2}s both`,
               }}
             >
-              <Icon className="mx-auto mb-2 opacity-75" size={24} />
-              <p className="font-pixel text-lg md:text-xl">{value}</p>
-              <p className="font-pixel text-[8px] mt-1 opacity-75">{label}</p>
+              <Icon className="mx-auto mb-2 text-retro-white/80" size={28} />
+              <p className="font-pixel text-xl md:text-2xl text-retro-white">{value}</p>
+              <p className="font-pixel text-[10px] md:text-xs mt-2 text-retro-white/80">{label}</p>
             </PixelCard>
           ))}
         </div>
@@ -101,7 +101,7 @@ export function HomePage() {
         {/* Retro Console Message */}
         <div className="mt-12 text-center">
           <div className="inline-block border-2 border-retro-primary/30 px-4 py-2">
-            <p className="font-mono text-xs text-retro-primary/70">
+            <p className="font-mono text-sm text-retro-secondary/80">
               &gt; PLAYER 1 READY_<span className="animate-blink">|</span>
             </p>
           </div>
@@ -112,7 +112,7 @@ export function HomePage() {
           {['JS', 'TS', 'PY', 'VUE', 'REACT', 'NODE'].map((tech, i) => (
             <span
               key={tech}
-              className="font-pixel text-[8px] px-2 py-1 border border-retro-gray/30 text-retro-gray/70"
+              className="font-pixel text-[10px] px-3 py-1 border border-retro-gray/40 text-retro-gray"
               style={{
                 animation: `fade-in 0.3s ease-out ${0.5 + i * 0.1}s both`,
               }}

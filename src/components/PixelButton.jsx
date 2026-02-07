@@ -10,9 +10,9 @@ const variants = {
 };
 
 const sizes = {
-  sm: 'text-[8px] px-2 py-1',
-  md: 'text-[10px] px-4 py-2',
-  lg: 'text-xs px-6 py-3',
+  sm: 'text-[10px] px-3 py-2',
+  md: 'text-xs px-4 py-2',
+  lg: 'text-sm px-6 py-3',
 };
 
 export function PixelButton({

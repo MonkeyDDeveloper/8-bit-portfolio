@@ -44,11 +44,11 @@ export function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  'font-pixel text-[10px] uppercase tracking-wider transition-colors relative',
-                  'hover:text-retro-secondary',
+                  'font-pixel text-xs uppercase tracking-wider transition-colors relative',
+                  'hover:text-retro-accent',
                   location.pathname === item.path
-                    ? 'text-retro-primary'
-                    : 'text-retro-gray'
+                    ? 'text-retro-secondary'
+                    : 'text-retro-white/70'
                 )}
               >
                 {location.pathname === item.path && (
@@ -101,11 +101,11 @@ export function Navbar() {
                 to={item.path}
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
-                  'block py-3 font-pixel text-xs uppercase tracking-wider transition-colors',
-                  'hover:text-retro-secondary hover:pl-4',
+                  'block py-3 font-pixel text-sm uppercase tracking-wider transition-colors',
+                  'hover:text-retro-accent hover:pl-4',
                   location.pathname === item.path
-                    ? 'text-retro-primary'
-                    : 'text-retro-gray'
+                    ? 'text-retro-secondary'
+                    : 'text-retro-white/70'
                 )}
               >
                 {location.pathname === item.path && (

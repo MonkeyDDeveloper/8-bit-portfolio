@@ -9,7 +9,7 @@
     /* Paleta azul marino clásico */
     --retro-black: #0a0f1e;          /* Azul muy oscuro (casi negro) */
     --retro-white: #f0f4f8;          /* Azul muy claro (casi blanco) */
-    --retro-gray: #64748b;           /* Gris azulado */
+    --retro-gray: #8194ab;           /* Gris azulado (más claro para mejor contraste) */
     --retro-darkgray: #1e293b;       /* Gris oscuro azulado */
     --retro-primary: #1e3a8a;        /* Azul marino profundo */
     --retro-secondary: #3b82f6;      /* Azul medio */
@@ -151,8 +151,8 @@
 
   /* Selection */
   ::selection {
-    background: var(--retro-primary);
-    color: var(--retro-black);
+    background: var(--retro-secondary);
+    color: var(--retro-white);
   }
 }
 

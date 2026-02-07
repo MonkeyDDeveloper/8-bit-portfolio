@@ -48,19 +48,19 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="font-pixel text-[8px] text-retro-gray uppercase tracking-wider flex items-center justify-center gap-2">
+          <p className="font-pixel text-[10px] text-retro-white/70 uppercase tracking-wider flex items-center justify-center gap-2">
             {t('footer.madeWith')}
-            <Heart size={12} className="text-retro-danger animate-bounce-pixel" fill="currentColor" />
+            <Heart size={14} className="text-retro-danger animate-bounce-pixel" fill="currentColor" />
             {t('footer.by')}
           </p>
-          <p className="font-pixel text-[8px] text-retro-darkgray mt-2">
+          <p className="font-pixel text-[10px] text-retro-gray mt-2">
             © {new Date().getFullYear()} - ALL RIGHTS RESERVED
           </p>
         </div>
 
         {/* Retro Console Message */}
         <div className="mt-6 text-center">
-          <p className="font-mono text-xs text-retro-primary/50">
+          <p className="font-mono text-sm text-retro-secondary/70">
             &gt; GAME OVER? NEVER. KEEP CODING_<span className="animate-blink">|</span>
           </p>
         </div>
