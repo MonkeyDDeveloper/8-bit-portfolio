@@ -41,6 +41,7 @@ export default {
         'float': 'float 4s ease-in-out infinite',
         'scan': 'scan 8s linear infinite',
         'marquee': 'marquee 20s linear infinite',
+        'heartbeat': 'heartbeat 1.2s ease-in-out infinite',
       },
       keyframes: {
         blink: {
@@ -75,6 +76,13 @@ export default {
         'marquee': {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        'heartbeat': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '14%':       { transform: 'scale(1.4)' },
+          '28%':       { transform: 'scale(1)' },
+          '42%':       { transform: 'scale(1.4)' },
+          '70%':       { transform: 'scale(1)' },
         },
       },
     },

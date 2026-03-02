@@ -66,6 +66,16 @@ export function Footer() {
           </p>
         </div>
 
+        {/* Para Mayra */}
+        <p className="mt-4 font-pixel text-[8px] text-retro-black hover:text-retro-white transition-colors duration-700 cursor-default select-none text-center flex items-center justify-center gap-1.5 group">
+          Mayra
+          <Heart
+            size={10}
+            className="text-retro-black group-hover:text-retro-danger transition-colors duration-700 group-hover:animate-heartbeat inline-block"
+            fill="currentColor"
+          />
+        </p>
+
       </div>
     </footer>
   );
