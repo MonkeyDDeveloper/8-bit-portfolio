@@ -4,13 +4,6 @@ import { PixelBadge } from '@/components/PixelBadge';
 import { Briefcase, MapPin, Calendar, Swords, Shield, Terminal, Star, ChevronRight } from 'lucide-react';
 import { useExperiences } from '@/hooks/useExperiences';
 
-const LEVEL_BADGE_VARIANTS = {
-  LEGENDARY: 'warning',
-  EPIC:      'accent',
-  RARE:      'secondary',
-  COMMON:    'default',
-};
-
 const LEVEL_GLOW = {
   LEGENDARY: 'shadow-[0_0_16px_rgba(245,158,11,0.55)]',
   EPIC:      'shadow-[0_0_12px_rgba(96,165,250,0.45)]',
@@ -23,6 +16,20 @@ const LEVEL_ICONS = {
   EPIC:      '★★',
   RARE:      '★',
   COMMON:    '◆',
+};
+
+const LEVEL_SHORT = {
+  LEGENDARY: 'LGD',
+  EPIC:      'EPIC',
+  RARE:      'RARE',
+  COMMON:    'CMN',
+};
+
+const LEVEL_COLOR = {
+  LEGENDARY: 'text-retro-warning',
+  EPIC:      'text-retro-accent',
+  RARE:      'text-retro-secondary',
+  COMMON:    'text-retro-gray',
 };
 
 const BADGE_VARIANTS = ['default', 'secondary', 'accent', 'warning', 'ghost'];
@@ -155,16 +162,6 @@ export function ExperiencePage() {
                 variant={exp.variant}
                 className={`relative group ${LEVEL_GLOW[exp.level] || ''}`}
               >
-                {/* Level badge + stars */}
-                <div className={`absolute -top-3 right-4 flex items-center gap-1.5 ${LEVEL_GLOW[exp.level] || ''}`}>
-                  <span className="font-pixel text-[8px] opacity-50">
-                    {LEVEL_ICONS[exp.level] || '◆'}
-                  </span>
-                  <PixelBadge variant={LEVEL_BADGE_VARIANTS[exp.level] || 'default'}>
-                    {exp.level}
-                  </PixelBadge>
-                </div>
-
                 {/* Hover chevron */}
                 <ChevronRight
                   size={14}
@@ -172,7 +169,8 @@ export function ExperiencePage() {
                 />
 
                 <PixelCardHeader>
-                  <div className="space-y-1.5 pr-24">
+                  <div className="flex items-start justify-between gap-3">
+                  <div className="space-y-1.5 min-w-0">
                     <PixelCardTitle className="flex items-center gap-2">
                       <Briefcase size={14} className="opacity-70 shrink-0" />
                       {exp.title}
@@ -193,6 +191,17 @@ export function ExperiencePage() {
                         <Calendar size={12} />{exp.period}
                       </span>
                     </div>
+                  </div>
+
+                  {/* Level indicator — inline, no overflow */}
+                  <div className="shrink-0 flex flex-col items-end gap-0.5 pt-0.5">
+                    <span className={`font-pixel text-xs leading-none ${LEVEL_COLOR[exp.level] || 'text-retro-gray'}`}>
+                      {LEVEL_ICONS[exp.level] || '◆'}
+                    </span>
+                    <span className={`font-pixel text-[8px] leading-none ${LEVEL_COLOR[exp.level] || 'text-retro-gray'} opacity-80`}>
+                      {LEVEL_SHORT[exp.level] || exp.level}
+                    </span>
+                  </div>
                   </div>
                 </PixelCardHeader>
 
