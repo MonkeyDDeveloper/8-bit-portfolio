@@ -38,6 +38,9 @@ export default {
         'slide-in': 'slide-in 0.3s ease-out',
         'fade-in': 'fade-in 0.5s ease-out',
         'glitch': 'glitch 0.3s infinite',
+        'float': 'float 4s ease-in-out infinite',
+        'scan': 'scan 8s linear infinite',
+        'marquee': 'marquee 20s linear infinite',
       },
       keyframes: {
         blink: {
@@ -60,6 +63,18 @@ export default {
           '0%, 100%': { transform: 'translate(0)' },
           '33%': { transform: 'translate(-2px, 2px)' },
           '66%': { transform: 'translate(2px, -2px)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'scan': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        'marquee': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

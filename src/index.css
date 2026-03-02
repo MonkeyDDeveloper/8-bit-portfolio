@@ -16,6 +16,7 @@
     --retro-accent: #60a5fa;         /* Azul claro */
     --retro-warning: #f59e0b;        /* Ámbar (para warnings) */
     --retro-danger: #ef4444;         /* Rojo (para errores) */
+    --retro-success: #10b981;        /* Verde (para éxito) */
   }
 
   * {
@@ -154,6 +155,23 @@
     background: var(--retro-secondary);
     color: var(--retro-white);
   }
+
+  /* Glow text utility */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+
+  /* Pixel shimmer for progress bars */
+  .pixel-shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+  }
 }
 
 /* Light mode overrides */
@@ -176,14 +194,38 @@
 }
 
 .light .pixel-card {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, transparent 100%);
-  border-color: rgba(30, 58, 138, 0.2); /* Bordes más visibles */
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(30, 58, 138, 0.03) 100%);
+  border-color: #1e40af !important;
+  box-shadow: 8px 8px 0 0 #1e40af !important;
+  color: #0f172a;
 }
 
 /* Mejorar contraste de badges en light mode */
 .light .pixel-badge {
   border-width: 2px;
-  opacity: 0.9;
+  opacity: 1;
+}
+
+/* Footer en light mode — fondo oscuro con texto claro explícito */
+.light footer {
+  background-color: #0a0f1e;
+  border-top-color: #1e40af;
+}
+
+.light footer,
+.light footer p,
+.light footer span,
+.light footer div,
+.light footer a {
+  color: #93c5fd !important;
+}
+
+.light footer a:hover {
+  color: #ffffff !important;
+}
+
+.light footer .text-retro-danger {
+  color: #ef4444 !important;
 }
 
 /* Mejorar contraste de botones en light mode */
@@ -191,11 +233,34 @@
   box-shadow: 2px 2px 0px 0px rgba(30, 58, 138, 0.4);
 }
 
-/* Texto más oscuro en light mode para mejor legibilidad */
-.light p, .light span, .light div {
+/* Texto legible en light mode */
+.light p, .light span, .light div, .light h1, .light h2, .light h3, .light li {
   color: #0f172a;
 }
 
+/* Forzar legibilidad en elementos con opacity baja */
+.light [class*="opacity-60"],
+.light [class*="opacity-50"],
+.light [class*="opacity-40"] {
+  opacity: 0.85 !important;
+}
+
 .light .text-retro-gray {
-  color: #475569 !important; /* Gris más oscuro */
+  color: #334155 !important;
+}
+
+/* Player card header band — mantener texto claro sobre fondo oscuro */
+.light .player-header-band,
+.light .player-header-band span {
+  color: #f0f4f8 !important;
+}
+
+.light .player-header-band .text-retro-warning {
+  color: #f59e0b !important;
+}
+
+/* Stars y elementos warning — mantener color ámbar en light mode */
+.light .text-retro-warning,
+.light [class*="text-retro-warning"] {
+  color: #b45309 !important;
 }

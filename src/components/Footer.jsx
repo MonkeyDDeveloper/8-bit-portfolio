@@ -1,20 +1,21 @@
 import { useTranslation } from 'react-i18next';
 import { Heart, Github, Linkedin, Globe, Mail } from 'lucide-react';
 
+const SOCIAL_LINKS = [
+  { icon: Github,   href: 'https://github.com/MonkeyDDeveloper',     label: 'GitHub',   hover: 'hover:text-retro-white hover:border-retro-white' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/javier-fray/', label: 'LinkedIn', hover: 'hover:text-retro-accent hover:border-retro-accent' },
+  { icon: Globe,    href: 'https://www.monkeydeveloper.com',           label: 'Website',  hover: 'hover:text-retro-secondary hover:border-retro-secondary' },
+  { icon: Mail,     href: 'mailto:fraydeveloper@gmail.com',            label: 'Email',    hover: 'hover:text-retro-warning hover:border-retro-warning' },
+];
+
 export function Footer() {
   const { t } = useTranslation();
 
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/MonkeyDDeveloper', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/javier-fray/', label: 'LinkedIn' },
-    { icon: Globe, href: 'https://www.monkeydeveloper.com', label: 'Website' },
-    { icon: Mail, href: 'mailto:fraydeveloper@gmail.com', label: 'Email' },
-  ];
-
   return (
-    <footer className="border-t-4 border-retro-primary bg-retro-black/80 mt-auto">
+    <footer className="border-t-4 border-retro-primary bg-retro-black mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Pixel Art Divider */}
+
+        {/* Pixel-bar divider */}
         <div className="flex justify-center mb-6">
           <div className="flex gap-1">
             {[...Array(10)].map((_, i) => (
@@ -31,39 +32,40 @@ export function Footer() {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4 mb-6">
-          {socialLinks.map(({ icon: Icon, href, label }) => (
+        <div className="flex justify-center gap-3 mb-6">
+          {SOCIAL_LINKS.map(({ icon: Icon, href, label, hover }) => (
             <a
               key={label}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-retro-gray hover:text-retro-secondary transition-colors border-2 border-transparent hover:border-retro-secondary"
+              className={`p-2.5 text-retro-secondary border-2 border-retro-secondary/40 transition-all duration-150 ${hover}`}
               title={label}
             >
-              <Icon size={20} />
+              <Icon size={18} />
             </a>
           ))}
         </div>
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="font-pixel text-[10px] text-retro-white/70 uppercase tracking-wider flex items-center justify-center gap-2">
+          <p className="font-pixel text-[10px] text-retro-secondary uppercase tracking-wider flex items-center justify-center gap-2">
             {t('footer.madeWith')}
-            <Heart size={14} className="text-retro-danger animate-bounce-pixel" fill="currentColor" />
+            <Heart size={12} className="text-retro-danger animate-bounce-pixel" fill="currentColor" />
             {t('footer.by')}
           </p>
-          <p className="font-pixel text-[10px] text-retro-gray mt-2">
+          <p className="font-pixel text-[10px] text-retro-accent/70 mt-2">
             © {new Date().getFullYear()} - ALL RIGHTS RESERVED
           </p>
         </div>
 
-        {/* Retro Console Message */}
-        <div className="mt-6 text-center">
-          <p className="font-mono text-sm text-retro-secondary/70">
+        {/* Console message */}
+        <div className="mt-5 text-center border-t border-retro-primary/30 pt-4">
+          <p className="font-mono text-base text-retro-secondary">
             &gt; GAME OVER? NEVER. KEEP CODING_<span className="animate-blink">|</span>
           </p>
         </div>
+
       </div>
     </footer>
   );

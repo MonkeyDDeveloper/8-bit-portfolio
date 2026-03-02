@@ -26,7 +26,8 @@ export function PixelButton({
   return (
     <button
       className={cn(
-        'font-pixel uppercase tracking-wider',
+        'font-pixel uppercase tracking-wider whitespace-nowrap',
+        'inline-flex items-center justify-center',
         'border-4 transition-all duration-100',
         'shadow-[4px_4px_0_0_currentColor]',
         'hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_currentColor]',

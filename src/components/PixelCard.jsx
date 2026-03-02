@@ -12,7 +12,7 @@ export function PixelCard({ children, className, variant = 'default', ...props }
   return (
     <div
       className={cn(
-        'p-4 border-4',
+        'pixel-card p-4 border-4',
         'shadow-[8px_8px_0_0_currentColor]',
         'bg-gradient-to-br from-white/5 to-transparent',
         'transition-all duration-200',
